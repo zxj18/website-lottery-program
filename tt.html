@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            .subDiv {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainDiv" style="width: 200px; height: 200px; overflow: hidden;">
+            <div class="subDiv">1</div>
+            <div class="subDiv">2</div>
+            <div class="subDiv">3</div>
+            <div class="subDiv">4</div>
+            <div class="subDiv">5</div>
+            <div class="subDiv">6</div>
+            <div class="subDiv">7</div>
+            <div class="subDiv">8</div>
+            <div class="subDiv">9</div>
+            <div class="subDiv">0</div>
+          </div>
+    </body>
+    <script>
+        var mainDiv = document.getElementById("mainDiv");
+var subDivs = document.getElementsByClassName("subDiv");
+var totalSubDivs = subDivs.length;
+var currentIndex = 0;
+
+function scrollSubDivs() {
+  // 计算下一个要显示的子div的索引
+  var nextIndex = (currentIndex + 1) % totalSubDivs;
+
+  // 更新子div的transform属性，实现滚动效果
+  mainDiv.style.transform = "translateX(" + (nextIndex * -100) + "%)";
+
+  // 更新当前子div的索引
+  currentIndex = nextIndex;
+}
+
+// 每隔3秒滚动一次子div
+setInterval(scrollSubDivs, 3000);
+    </script>
+</html>
