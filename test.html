@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.11.5/CSSRulePlugin.js"></script>
+  <script src="./selectNumber.js"></script>
+  <script src="./test.js"></script>
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="input.css">
+  <link rel="stylesheet" href="selectnumber.css">
+</head>
+<body>
+    <audio id="audio" src="./boble.mp3"></audio>
+    
+    <div id="navbarContainer">
+        <div class="tab tab1">
+            <div class="container">
+                <div class="container__item">
+                    <form class="form">
+                        <input type="text" id="numbers" class="form__field" placeholder="请输入起止号码" />
+                        <button type="button" class="btn btn--primary btn--inside uppercase" id="saveNumbers">确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;认</button>
+                    </form>
+                </div>
+                
+                <div class="container__item container__item--bottom">
+                    <p>当前奖池号码为:<i id="pool"></i>.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tab tab2">
+            <div class="window">
+                <div class="number-container number-container1">
+
+                </div>
+            </div>
+            <div class="window">
+                <div class="number-container number-container2">
+
+                </div>
+            </div>
+            <div class="window">
+                <div class="number-container number-container3">
+
+                </div>
+            </div>
+        </div>
+        <div id="navbar">
+            <div id="bubbleWrapper">
+            <div id="bubble1" class="bubble"><span class="icon"><i class="fas fa-home">输入</i></span></div>
+            <div id="bubble2" class="bubble"><span class="icon"><i class="fab fa-twitter">抽奖</i></span></div>
+            <div id="bubble3" class="bubble"><span class="icon"><i class="fas fa-bell">再抽</i></span></div>
+            <div id="bubble4" class="bubble"><span class="icon"><i class="fas fa-user">记录</i></span></div>
+            </div>
+            <div id="menuWrapper">
+            <div id="menu1" class="menuElement"><i class="fas fa-home">输入</i></div>
+            <div id="menu2" class="menuElement"><i class="fab fa-twitter">抽奖</i></div>
+            <div id="menu3" class="menuElement"><i class="fas fa-bell">再抽</i></div>
+            <div id="menu4" class="menuElement"><i class="fas fa-user">记录</i></div>
+            </div>
+        </div>
+        <div id="bgWrapper">
+            <div id="bg"></div>
+            <div id="bgBubble"></div>
+        </div>
+    </div>
+
+  <svg width="0" height="0" >
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter"/>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+ 
+</body>
+
+</html>
