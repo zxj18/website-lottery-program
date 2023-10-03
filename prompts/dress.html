@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dress.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+    <title>Mid Journey服装提示词</title>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="header"><h1>Mid Journey服装提示词</h1></div>
+        <div class="imgs flex-waterfall">
+            <div class="img item" v-for="(img,index) in imgs">
+                <img :src="`dress/${index+1}.png`" alt="" >
+                <div class="prompt">{{img.prompt}}</div>
+            </div>
+        </div>
+    </div>
+    <script src="dress.js"></script>
+</body>
+</html>

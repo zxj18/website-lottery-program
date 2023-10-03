@@ -1,0 +1,31 @@
+@import url(reset.css);
+
+div.container{
+    --color-background:#F2E6F2;
+    --color-section-background:#C29BC4;
+    --color-h3:#8F84B0;
+    --color-h2:#8B738C;
+    --color-prompt:#7E5E80;
+    --color-h1:white;
+
+}
+div.header{
+    background-color: var(--color-section-background);
+    border-radius: 10px 10px 0 0;
+}
+h1{
+    color:var(--color-h1);
+    padding-left: 20px;
+}
+div.imgs{
+    box-sizing: border-box;
+    border: solid var(--color-section-background) 5px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--color-background);
+}
+div.img{
+    background-color: var(--color-background);
+    border-radius: 10px;
+    border:solid var(--color-prompt) 2px;
+    color:var(--color-prompt);
+}
